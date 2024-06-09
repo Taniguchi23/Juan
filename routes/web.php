@@ -27,3 +27,4 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::get('/productos', [NiubizPaymentController::class, 'productos']);
+Route::get('/comprar', [NiubizPaymentController::class, 'comprar'])->name('comprar');

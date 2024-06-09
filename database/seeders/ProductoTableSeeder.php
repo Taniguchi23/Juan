@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProductoTableSeeder extends Seeder
 {
@@ -12,7 +13,7 @@ class ProductoTableSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('technology_products')->insert([
+        DB::table('productos')->insert([
             [
                 'name' => 'Laptop',
                 'description' => 'Powerful laptop for all your needs',
