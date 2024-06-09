@@ -37,13 +37,13 @@
                             <label for="ckbTerms">Acepto los <a href="#" target="_blank">Términos y condiciones</a></label>
 
 
-                            <form id="frmVisaNet" action="finalizar.php?amount=<?php echo $producto->price;?>&purchaseNumber=<?php echo $purchaseNumber?>&plan=<?php echo $producto->id?>">
+                            <form id="frmVisaNet" method="post" action="/finalizar?amount=<?php echo $producto->price;?>&purchaseNumber=<?php echo $purchaseNumber?>&plan=<?php echo $producto->id?>">
                                 <input type="hidden" name="token" value="<?php echo $session;?>">
                                 <script src="<?php echo \App\Helpers\VisaHelper::VISA_URL_JS?>"
                                         data-sessiontoken="<?php echo $session;?>"
                                         data-channel="web"
                                         data-merchantid="<?php echo \App\Helpers\VisaHelper::VISA_MERCHANT_ID?>"
-                                        data-merchantlogo="https://imagenes.utp-sistemas.com/sonqollay/logo_oficial.png"
+                                        data-merchantlogo="https://imagenes.utp-sistemas.com/autonoma/logo.jpg"
                                         data-purchasenumber="<?php echo $purchaseNumber;?>"
                                         data-amount="<?php echo $producto->price; ?>"
                                         data-expirationminutes="5"
