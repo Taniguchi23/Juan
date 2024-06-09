@@ -73,14 +73,14 @@
                                                 <li><a href="{{ route('nosotros') }}">Quienes somos</a></li>
                                             </ul>
                                         </li>
-                                        <!-- li class="dropdown"><a href="#">Servicios</a>
+                                        <li class="dropdown"><a href="#">Productos</a>
                                             <ul>
-                                                <li><a href="{{ route('servicios') }}">Nuestros Servicios</a></li>
-                                                <li><a href="">Seguridad y Vigilancia</a></li>
-                                                <li><a href="">Prevencionista</a></li>
-                                                <li><a href="">Seguridad Electronica</a></li>
+                                                <li><a href="">Routers</a></li>
+                                                <li><a href="">Cables</a></li>
+                                                <li><a href="">Fuentes</a></li>
+                                                <li><a href="">Memorias</a></li>
                                             </ul>
-                                        </li -->
+                                        </li>
                                         <li><a href="{{ route('contacto') }}">Contacto</a></li>
                                     </ul>
                                 </div>
