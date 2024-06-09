@@ -22,7 +22,6 @@ class NiubizPaymentController extends Controller
     }
 
     public function finalizar(Request $request){
-        dd(666);
         $transactionToken = $request->transactionToken;
         $customerEmail = $request->customerEmail;
         $amount = $request->amount;
