@@ -90,13 +90,13 @@
                                 </div-->
 
                                 <!-- Cart Box -->
-                                <div class="cart-box">
+                                <!-- div class="cart-box">
                                     <div class="dropdown">
                                         <a class="cart-box-btn dropdown-toggle" href="{{ route('login') }}"
                                             type="button" target="_blank"><span class="fa fa-shopping-cart"></span>
                                         </a>
                                     </div>
-                                </div>
+                                </div -->
                             </div>
                         </div>
                     </div>
