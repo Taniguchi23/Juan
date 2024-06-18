@@ -5,10 +5,12 @@
             @foreach($productos as $product)
                 <div class="col-md-4 mb-4">
                     <div class="card">
+                        <a href="#"><img src="{{ Storage::url($product->image) }}" width="263"
+                            height="282"/></a>
                         <div class="card-body">
-                            <h5 class="card-title">{{ $product->name }}</h5>
+                            <h5 class="card-title" style="text-align: center">{{ $product->name }}</h5>
                             <p class="card-text">{{ $product->description }}</p>
-                            <p class="card-text"><strong>Precio:</strong> ${{ number_format($product->price, 2) }}</p>
+                            <p class="card-text"><strong>Precio:</strong> S/. {{ number_format($product->price, 2) }}</p>
                             <a href="{{ route('comprar', ['id' => $product->id]) }}" class="btn btn-primary">Comprar</a>
                         </div>
                     </div>

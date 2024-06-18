@@ -6,6 +6,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NiubizPaymentController;
+use Illuminate\Support\Facades\Artisan;
 
 Route::controller(WebController::class)->group(function () {
     Route::get('/', 'index')->name('index');
@@ -26,6 +27,11 @@ Route::group(['middleware' => 'auth'], function () {
     });
 });
 
-Route::get('/productos', [NiubizPaymentController::class, 'productos']);
+Route::get('/productos', [NiubizPaymentController::class, 'productos'])->name('productos.index');
 Route::get('/comprar', [NiubizPaymentController::class, 'comprar'])->name('comprar');
 Route::post('/finalizar', [NiubizPaymentController::class, 'finalizar'])->name('finalizar');
+
+
+Route::get('/linkear', function () {
+    Artisan::call('storage:link');
+});

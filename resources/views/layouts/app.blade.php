@@ -75,10 +75,7 @@
                                         </li>
                                         <li class="dropdown"><a href="#">Productos</a>
                                             <ul>
-                                                <li><a href="">Routers</a></li>
-                                                <li><a href="">Cables</a></li>
-                                                <li><a href="">Fuentes</a></li>
-                                                <li><a href="">Memorias</a></li>
+                                                <li><a href="{{ route('productos.index') }}">Routers</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="{{ route('contacto') }}">Contacto</a></li>
