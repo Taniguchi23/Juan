@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\VisaHelper;
 use App\Models\Producto;
+use App\Models\Venta;
 use Illuminate\Http\Request;
 
 class NiubizPaymentController extends Controller
@@ -27,11 +28,19 @@ class NiubizPaymentController extends Controller
         $amount = $request->amount;
         $purchaseNumber = $request->purchaseNumber;
         $channel = $request->channel;
-
         $token = VisaHelper::generateToken();
         $data = VisaHelper::generateAuthorization($amount, $purchaseNumber, $transactionToken, $token);
-        //TODO registrar la compra en tu bd
-        dd($data);
+
+        // Registrar la compra en la base de datos
+        Venta::create([
+            'transaction_token' => $transactionToken,
+            'customer_email' => $customerEmail,
+            'amount' => $amount,
+            'purchase_number' => $purchaseNumber,
+            'channel' => $channel,
+            'response_data' => $data,
+        ]);
+        
         return view('productos.finalizar', compact('data','purchaseNumber'));
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="container">
+    <div class="container text-center">
         <?php
         if (isset($data->dataMap)) {
         if ($data->dataMap->ACTION_CODE == "000") {
@@ -10,7 +10,7 @@
                 <?php echo $data->dataMap->ACTION_DESCRIPTION;?>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-12">
                 <b>Número de pedido: </b> <?php echo $purchaseNumber; ?>
             </div>
@@ -33,7 +33,7 @@
                 <?php echo $data->data->ACTION_DESCRIPTION;?>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-12">
                 <b>Número de pedido: </b> <?php echo $purchaseNumber; ?>
             </div>

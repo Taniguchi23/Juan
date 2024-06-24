@@ -5,7 +5,7 @@
             @foreach($productos as $product)
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <a href="#"><img src="{{ Storage::url($product->image) }}" width="263"
+                        <a href="#"><img src="{{ $product->image }}" width="263"
                             height="282"/></a>
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center">{{ $product->name }}</h5>

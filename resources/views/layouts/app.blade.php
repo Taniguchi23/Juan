@@ -48,7 +48,7 @@
                 <div class="auto-container clearfix">
                     <div class="inner-container clearfix">
                         <div class="pull-left logo-box">
-                            <div class="logo"><a href="{{ route('index') }}"><img src="/assets/images/logo.jpg"
+                            <div class="logo"><a href="{{ route('index') }}"><img src="/assets/images/Logo2.png" width="80px" height="80px"
                                         alt="" title=""></a></div>
                         </div>
                         <div class="nav-outer clearfix">
@@ -109,7 +109,7 @@
                 <div class="auto-container clearfix">
                     <!-- Logo -->
                     <div class="logo pull-left">
-                        <a href="{{ route('index') }}" title=""><img src="/assets/images/logo-small.jpg"
+                        <a href="{{ route('index') }}" title=""><img src="/assets/images/Logo2.png" width="80px" height="80px"
                                 alt="" title=""></a>
                     </div>
                     <!--Right Col-->
@@ -119,6 +119,7 @@
                             <!--Keep This Empty / Menu will come through Javascript-->
                         </nav><!-- Main Menu End-->
 
+                        {{-- 
                         <div class="outer-box clearfix">
                             <!-- Cart Box -->
                             <div class="cart-box">
@@ -131,6 +132,7 @@
                                 </div>
                             </div>
                         </div>
+                        --}}
                     </div>
                 </div>
             </div><!-- End Sticky Menu -->
@@ -163,7 +165,7 @@
             <div class="auto-container">
                 <div class="widgets-section">
                     <div class="logo">
-                        <a href="{{ route('index') }}"><img src="/assets/images/footer-logo.jpg"
+                        <a href="{{ route('index') }}"><img src="/assets/images/Logo2.png" width="250px" height="250px"
                                 alt="" /></a>
                     </div>
                     <ul class="contact-info-list">
