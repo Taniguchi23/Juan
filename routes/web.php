@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\UsuarioController;
+use App\Http\Controllers\Admin\VentaController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\WebController;
@@ -24,6 +25,11 @@ Route::group(['middleware' => 'auth'], function () {
     /* ----- USUARIOS -----*/
     Route::controller(UsuarioController::class)->group(function () {
         Route::get('/usuarios/index', 'index')->name('admin.usuarios');
+    });
+
+    /* ----- VENTAS -----*/
+    Route::controller(VentaController::class)->group(function () {
+        Route::get('/ventas/index', 'index')->name('admin.ventas');
     });
 });
 
